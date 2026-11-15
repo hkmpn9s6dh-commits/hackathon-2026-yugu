@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>雨骨 · 02 里面</title>
+<link rel="stylesheet" href="base.css" />
+<style>
+  .eyebrow { position: absolute; left: 170px; top: 170px; }
+  .title {
+    position: absolute; left: 170px; top: 226px;
+    font-family: var(--serif); font-weight: 600; font-size: 262px; line-height: 1.06;
+    letter-spacing: 0.1em; padding-bottom: 18px;
+  }
+  .title small {
+    display: block; font-family: var(--sans); font-weight: 300; font-size: 34px;
+    letter-spacing: 0.34em; color: var(--ink-3); margin-top: 26px; margin-left: 12px;
+  }
+  .headrule { position: absolute; left: 170px; top: 748px; width: 3168px; }
+
+  .disc { position: absolute; left: 0; top: 0; }
+
+  .col { position: absolute; left: 2200px; top: 812px; width: 1138px; }
+  .col h3 {
+    font-family: var(--sans); font-size: 28px; font-weight: 500; letter-spacing: 0.3em;
+    color: var(--ink-3); margin-bottom: 20px;
+  }
+  .col p { font-size: 33px; line-height: 1.74; color: var(--ink-2); }
+  .col p + p { margin-top: 14px; }
+  .col p + h3 { margin-top: 46px; }
+  .legend .row { display: flex; gap: 18px; margin-bottom: 22px; }
+  .legend .no {
+    flex: 0 0 44px; width: 44px; height: 44px; border-radius: 50%;
+    background: var(--cinnabar); color: #FBF6E9; font-family: var(--sans); font-size: 26px;
+    display: flex; align-items: center; justify-content: center; margin-top: 6px;
+  }
+  .legend .tx { font-size: 32px; line-height: 1.62; color: var(--ink-2); }
+  .legend .tx b { font-weight: 600; color: var(--ink); }
+  .kv { display: flex; font-size: 32px; line-height: 1.66; color: var(--ink-2); }
+  .kv b { font-weight: 400; color: var(--ink-4); font-family: var(--sans); font-size: 25px; letter-spacing: .14em; min-width: 138px; padding-top: 9px; }
+  .only { margin-top: 40px; padding: 24px 26px; border-left: 6px solid var(--cinnabar); background: rgba(156,42,34,.045); }
+  .only p { font-size: 32px; line-height: 1.7; }
+  .only p b { color: var(--cinnabar); font-weight: 600; }
+
+  .steps { position: absolute; left: 170px; top: 3300px; width: 3168px; }
+  .steps h3 {
+    font-family: var(--sans); font-size: 28px; font-weight: 500; letter-spacing: 0.3em; color: var(--ink-3);
+    margin-bottom: 26px;
+  }
+  .steps .grid { display: grid; grid-template-columns: repeat(9, 1fr); gap: 24px 0; }
+  .steps .item { font-size: 33px; color: var(--ink-2); border-top: 1px solid rgba(27,30,26,.3); padding-top: 16px; }
+  .steps .item i { font-style: normal; font-family: var(--sans); font-size: 25px; color: var(--ink-4); display: block; margin-top: 8px; letter-spacing: .08em; }
+
+  .footrule { position: absolute; left: 170px; top: 3900px; width: 3168px; }
+  .lead { position: absolute; left: 170px; top: 3962px; width: 2400px; font-size: 76px; line-height: 1.48; color: var(--ink); }
+  .lead em { font-style: normal; color: var(--cinnabar); }
+  .note { position: absolute; left: 170px; top: 4228px; width: 2400px; font-family: var(--sans); font-size: 30px; font-weight: 300; line-height: 1.7; color: var(--ink-3); }
+  .sealwrap { position: absolute; left: 2960px; top: 3960px; width: 300px; height: 420px; }
+  .seal { position: absolute; left: 0; top: 0; width: 214px; height: 262px; font-size: 92px; line-height: 1.08; padding-top: 26px; text-align: center; writing-mode: vertical-rl; letter-spacing: 0.06em; }
+  .seal-sign { position: absolute; left: 0; bottom: 0; width: 300px; text-align: center; font-family: var(--sans); font-size: 26px; letter-spacing: .2em; color: var(--ink-4); }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="paper-grain"></div>
+  <svg class="paper-speck" width="3508" height="4961" aria-hidden="true">
+    <filter id="speck"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="11"/><feColorMatrix type="saturate" values="0"/></filter>
+    <rect width="3508" height="4961" filter="url(#speck)" opacity="0.06"/>
+  </svg>
+
+  <div class="eyebrow" data-safe>二 · 里面</div>
+  <div class="title" data-safe data-fit>骨<small>三 十 二 根 淡 竹，一 道 粘 缝 也 没 有</small></div>
+  <div class="rule headrule"></div>
+
+  <svg class="disc" id="disc" width="3508" height="4961" aria-label="伞内面：三十二根长骨、短撑与穿花线"></svg>
+
+  <div class="col" data-safe>
+    <div class="legend">
+      <h3>图　注</h3>
+      <div class="row"><div class="no">1</div><div class="tx"><b>长骨 32 根</b><br/>每根 4 毫米宽，一根一根从一段淡竹上劈出来。</div></div>
+      <div class="row"><div class="no">2</div><div class="tx"><b>短撑 32 根</b><br/>从下斗斜撑到长骨中段，和长骨并着走。</div></div>
+      <div class="row"><div class="no">3</div><div class="tx"><b>穿花线</b><br/>在长骨与短撑之间来回穿，一把要穿 296 针。</div></div>
+      <div class="row"><div class="no">4</div><div class="tx"><b>上斗、下斗</b><br/>竹制套合，不用一根钉，也不用一滴胶。</div></div>
+    </div>
+
+    <h3>材　料</h3>
+    <p>淡竹——安吉、富阳一带，三年以上，竹节间隔不小于 38 厘米，一段只取中间两三节。<br/>
+       伞面——真丝电力纺，薄如蝉翼。<br/>
+       伞顶与伞柄——硬木；旧时高档用牛角。</p>
+
+    <h3>尺　寸</h3>
+    <div class="kv"><b>伞面直径</b><span>80 厘米</span></div>
+    <div class="kv"><b>收拢长度</b><span>55 厘米</span></div>
+    <div class="kv"><b>整伞重量</b><span>约 250 克</span></div>
+    <div class="kv"><b>骨　　数</b><span>32 根，间隔 11.25°</span></div>
+
+    <div class="only">
+      <p>这一把<b>只改伞面上那一层墨</b>。骨、柄、线、贴青、包头，十八道工序一道不动。</p>
+    </div>
+  </div>
+
+  <div class="steps" data-safe>
+    <h3>一 把 伞 的 十 八 道 工 序</h3>
+    <div class="grid">
+      <div class="item">选竹<i>白露前号竹</i></div>
+      <div class="item">擘竹<i>一劈三十二</i></div>
+      <div class="item">劈青<i>青篾留用</i></div>
+      <div class="item">铣槽<i>骨上开槽</i></div>
+      <div class="item">钻孔<i>每排三十六孔</i></div>
+      <div class="item">串骨<i>套合不用胶</i></div>
+      <div class="item">绷面<i>八十一厘绷圈</i></div>
+      <div class="item">上架<i>骨面合一</i></div>
+      <div class="item">穿花线<i>一把二百九十六针</i></div>
+      <div class="item">刷花<i>套色上纹</i></div>
+      <div class="item">摺伞<i>收成一枝</i></div>
+      <div class="item">贴青<i>三齐一圆</i></div>
+      <div class="item">装杆<i>杆入下斗</i></div>
+      <div class="item">包头<i>顶与柄相接</i></div>
+      <div class="item">装柄<i>木或牛角</i></div>
+      <div class="item">钉扣<i>撑得住风</i></div>
+      <div class="item">修伞<i>合口对齐</i></div>
+      <div class="item">包　　装<i>一支竹入套</i></div>
+    </div>
+  </div>
+
+  <div class="rule footrule"></div>
+  <div class="lead" data-safe data-fit>伞骨不是装饰。<br/>它一根根数得清，<em>雨也一样。</em></div>
+  <div class="note" data-safe data-fit>
+    骨数与圈数各说一件事：32 根骨是工艺（传统做法，一根不改）；<span data-k="n">25</span> 圈墨是这一把记的那场雨（2024 年 6 月 9 日至 7 月 3 日），一共 <span data-k="drops">424</span> 滴。<br/>
+    工艺数据依国家级非遗「伞制作技艺（西湖绸伞）」公开资料：18 道工序、32 根骨、每根 4 毫米、穿花线 296 针、贴青「三齐一圆」。
+  </div>
+
+  <div class="sealwrap">
+    <div class="seal">雨骨</div>
+    <div class="seal-sign">雨　落　成　骨</div>
+  </div>
+</div>
+
+<script src="../data/rain-2024.js"></script>
+<script src="pattern.js"></script>
+<script>
+  (function () {
+    const daily = window.RAIN.daily;
+    const st = window.YUGU.stats(daily);
+    document.querySelectorAll("[data-k]").forEach((el2) => {
+      if (el2.dataset.k === "n") el2.textContent = String(st.n);
+      if (el2.dataset.k === "drops") el2.textContent = String(st.drops);
+    });
+
+    const svg = document.getElementById("disc");
+    const CX = 1130, CY = 1900, R = 980;
+    window.YUGU.inside(svg, { cx: CX, cy: CY, R, w: 3508, h: 4961 });
+
+    const NS = "http://www.w3.org/2000/svg";
+    const add = (n, a) => { const e = document.createElementNS(NS, n); for (const k in a) e.setAttribute(k, a[k]); svg.appendChild(e); return e; };
+    const th = (d) => (d * Math.PI) / 180;
+    const mark = (deg, frac, no) => {
+      const x = CX + Math.cos(th(deg)) * R * frac;
+      const y = CY + Math.sin(th(deg)) * R * frac;
+      add("circle", { cx: x, cy: y, r: 34, fill: "#9c2a22", opacity: .95 });
+      add("circle", { cx: x, cy: y, r: 34, fill: "none", stroke: "#FBF6E9", "stroke-width": 4, opacity: .9 });
+      const t = add("text", { x, y: y + 12, "text-anchor": "middle", fill: "#FBF6E9",
+        "font-family": "Noto Sans SC, sans-serif", "font-size": 34, "font-weight": 500 });
+      t.textContent = String(no);
+    };
+    // 标注点按图形算出来，不靠手放：1 在长骨上，2 在短撑上，3 在花线网上，4 在斗上
+    const bone = (b, frac) => {
+      const t = (b / 32) * Math.PI * 2 - Math.PI / 2;
+      return [CX + Math.cos(t) * R * frac, CY + Math.sin(t) * R * frac];
+    };
+    const stay = (b, f) => {
+      const t1 = (b / 32) * Math.PI * 2 - Math.PI / 2;
+      const t2 = t1 + Math.PI / 32;
+      const A = [CX + Math.cos(t2) * 112, CY + Math.sin(t2) * 112];
+      const B = [CX + Math.cos(t1) * R * 0.46, CY + Math.sin(t1) * R * 0.46];
+      return [A[0] + (B[0] - A[0]) * f, A[1] + (B[1] - A[1]) * f];
+    };
+    const at = (no, xy) => {
+      add("circle", { cx: xy[0], cy: xy[1], r: 34, fill: "#9c2a22", opacity: .96 });
+      add("circle", { cx: xy[0], cy: xy[1], r: 34, fill: "none", stroke: "#FBF6E9", "stroke-width": 4, opacity: .9 });
+      const t = add("text", { x: xy[0], y: xy[1] + 12, "text-anchor": "middle", fill: "#FBF6E9",
+        "font-family": "Noto Sans SC, sans-serif", "font-size": 34, "font-weight": 500 });
+      t.textContent = String(no);
+    };
+    at(1, bone(6, 0.66));
+    at(2, stay(22, 0.55));
+    at(3, stay(26, 0.2));
+    at(4, bone(3, 0.11));
+
+    window.__YUGU_REPORT__ = { stats: st, rings: 0 };
+  })();
+</script>
+</body>
+</html>

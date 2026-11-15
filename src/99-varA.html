@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>雨骨 · 01 撑开</title>
+<link rel="stylesheet" href="base.css" />
+<style>
+  .head { position: absolute; left: 170px; top: 170px; width: 3168px; }
+  .head .eyebrow { display: block; }
+  .title {
+    position: absolute; left: 170px; top: 228px;
+    font-family: var(--serif); font-weight: 600;
+    font-size: 320px; line-height: 1.04; letter-spacing: 0.1em; padding-bottom: 22px;
+    color: var(--ink);
+  }
+  .title small {
+    display: block; font-family: var(--sans); font-weight: 300;
+    font-size: 34px; letter-spacing: 0.42em; color: var(--ink-3);
+    margin-top: 30px; margin-left: 10px;
+  }
+  .vertical {
+    position: absolute; right: 186px; top: 236px;
+    writing-mode: vertical-rl;
+    font-family: var(--serif); font-size: 46px; letter-spacing: 0.3em;
+    color: var(--ink-2);
+  }
+  .headrule { position: absolute; left: 170px; top: 792px; width: 3168px; }
+
+  .disc { position: absolute; left: 0; top: 0; }
+
+  .footrule { position: absolute; left: 170px; top: 3764px; width: 3168px; }
+  .lead {
+    position: absolute; left: 170px; top: 3828px; width: 2260px;
+    font-family: var(--serif); font-size: 96px; line-height: 1.42; font-weight: 400;
+    color: var(--ink);
+  }
+  .lead em { font-style: normal; color: var(--cinnabar); }
+  .data { position: absolute; left: 170px; top: 4236px; width: 2500px; display: flex; }
+  .data .cell { padding-right: 46px; margin-right: 46px; border-right: 1px solid rgba(27,30,26,.22); }
+  .data .cell:last-child { border-right: 0; margin-right: 0; }
+  .data .num { font-family: var(--serif); font-weight: 600; font-size: 92px; line-height: 1; color: var(--ink); }
+  .data .num span { font-size: 40px; font-weight: 400; margin-left: 8px; color: var(--ink-2); }
+  .data .lab { font-family: var(--sans); font-size: 28px; font-weight: 300; letter-spacing: .12em; color: var(--ink-3); margin-top: 18px; }
+  .note {
+    position: absolute; left: 170px; top: 4468px; width: 2520px;
+    font-family: var(--sans); font-size: 30px; font-weight: 300; line-height: 1.72;
+    color: var(--ink-3);
+  }
+  .seal {
+    position: absolute; left: 0; top: 0; width: 214px; height: 262px;
+    font-size: 92px; line-height: 1.08; padding: 26px 0 0 0; text-align: center;
+    writing-mode: vertical-rl; letter-spacing: 0.06em;
+  }
+  .sealwrap { position: absolute; left: 2960px; top: 4268px; width: 300px; height: 420px; }
+  .seal-sign {
+    position: absolute; left: 0; bottom: 0; width: 300px; text-align: center;
+    font-family: var(--sans); font-size: 26px; letter-spacing: .2em; color: var(--ink-4);
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="paper-grain"></div>
+  <svg class="paper-speck" width="3508" height="4961" aria-hidden="true">
+    <filter id="speck"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="11"/><feColorMatrix type="saturate" values="0"/></filter>
+    <rect width="3508" height="4961" filter="url(#speck)" opacity="0.06"/>
+  </svg>
+
+  <div class="head">
+    <div class="eyebrow" data-safe>2026 第二届 AI 工艺美术创意设计大赛　·　日用器物　·　西湖绸伞（国家级非物质文化遗产）</div>
+  </div>
+
+  <div class="title" data-safe data-fit>雨骨<small>一 把 记 着 二 十 五 天 雨 的 伞</small></div>
+  <div class="vertical" data-safe>收起一支竹，撑开一场雨</div>
+  <div class="rule headrule"></div>
+
+  <svg class="disc" id="disc" width="3508" height="4961" aria-label="伞面俯视：二十五圈雨带"></svg>
+
+  <div class="rule footrule"></div>
+  <div class="lead" data-safe data-fit>撑开是一把伞，<br/>也是那场雨；<em>收起来，它还是一支竹。</em></div>
+
+  <div class="data" data-safe>
+    <div class="cell"><div class="num" data-k="days">25<span>天</span></div><div class="lab">梅　雨　期</div></div>
+    <div class="cell"><div class="num" data-k="total">422.8<span>毫米</span></div><div class="lab">二　十　五　天　合　计</div></div>
+    <div class="cell"><div class="num" data-k="drops">423<span>滴</span></div><div class="lab">伞　面　上　的　墨　点</div></div>
+    <div class="cell"><div class="num" data-k="peak">82.6<span>毫米</span></div><div class="lab">最　大　的　一　天</div></div>
+  </div>
+
+  <div class="note" data-safe data-fit>
+    一天一圈，从伞心到伞边：外圈是 7 月 3 日，内圈是 6 月 9 日。每圈等面积，也就是每天占同样大的一块绸。<br/>
+    一滴墨记一毫米雨，那一圈墨的浓淡也由当天的雨量决定。数据：杭州 2024 年梅雨期逐日降水，Open-Meteo（ERA5-Land）再分析日值；梅期起止依浙江省气象台 2024-07-04 发布。
+  </div>
+
+  <div class="sealwrap">
+    <div class="seal">雨骨</div>
+    <div class="seal-sign">雨　落　成　骨</div>
+  </div>
+</div>
+
+<script src="../data/rain-2024.js"></script>
+<script src="pattern.js"></script>
+<script>
+  (function () {
+    const daily = window.RAIN.daily;
+    const st = window.YUGU.stats(daily);
+    const set = (k, v) => {
+      const el = document.querySelector(`[data-k="${k}"]`);
+      if (el) el.firstChild.nodeValue = v;
+    };
+    set("days", String(st.n));
+    set("total", st.total.toFixed(1));
+    set("drops", String(st.drops));
+    set("peak", st.max.toFixed(1));
+    const svg = document.getElementById("disc");
+    const out = window.YUGU.open(svg, { cx: 1754, cy: 2406, R: 1288, daily, w: 3508, h: 4961 });
+    window.__YUGU_REPORT__ = { stats: st, rings: out.rings.length };
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+/* 雨骨 · A3 / 300dpi 版式底子
+ * 尺寸单位一律用 px，画布就是 3508×4961（A3 300dpi），不做缩放换算。
+ */
+
+/* 字形分片由 scripts/vendor_fonts.py 生成，随仓库带走：换台机器也不会变字形 */
+@import url("../assets/fonts/fonts.css");
+
+:root {
+  --paper: #f7f2e6;
+  --paper-2: #f2ebd9;
+  --ink: #1b1e1a;
+  --ink-2: #3c3a32;
+  --ink-3: #6b6355;
+  --ink-4: #948a78;
+  --cinnabar: #9c2a22;
+  --bamboo: #8a7449;
+  --serif: "Noto Serif SC", serif;
+  --sans: "Noto Sans SC", sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 3508px;
+  height: 4961px;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+}
+
+.sheet {
+  position: relative;
+  width: 3508px;
+  height: 4961px;
+  padding: 170px;
+  overflow: hidden;
+}
+
+/* 纸：极淡的纤维与不均匀受光，别让人一眼看出是网页 */
+.paper-grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image:
+    radial-gradient(120% 80% at 18% 4%, rgba(255, 253, 244, 0.85), rgba(255, 253, 244, 0) 62%),
+    radial-gradient(90% 60% at 92% 98%, rgba(196, 178, 140, 0.16), rgba(196, 178, 140, 0) 68%);
+}
+.paper-speck {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.34;
+  mix-blend-mode: multiply;
+}
+
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  color: var(--ink-3);
+}
+
+.rule {
+  height: 2px;
+  background: var(--ink);
+  opacity: 0.55;
+}
+.rule-hair {
+  height: 1px;
+  background: var(--ink);
+  opacity: 0.28;
+}
+
+.caption {
+  font-family: var(--sans);
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--ink-3);
+  letter-spacing: 0.02em;
+}
+
+.body {
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 1.85;
+  color: var(--ink-2);
+  letter-spacing: 0.01em;
+}
+
+.seal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid var(--cinnabar);
+  color: var(--cinnabar);
+  font-family: var(--serif);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  opacity: 0.92;
+}

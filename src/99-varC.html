@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>雨骨 · varC 留白</title>
+<link rel="stylesheet" href="base.css" />
+<style>
+  .eyebrow { position: absolute; left: 170px; top: 170px; }
+  .title {
+    position: absolute; right: 190px; top: 210px; width: 300px;
+    writing-mode: vertical-rl; text-align: center;
+    font-family: var(--serif); font-weight: 600; font-size: 236px; line-height: 1.06;
+    letter-spacing: 0.12em; padding-bottom: 40px;
+  }
+  .sub {
+    position: absolute; right: 540px; top: 250px; height: 640px;
+    writing-mode: vertical-rl; font-size: 40px; letter-spacing: 0.36em; color: var(--ink-3);
+  }
+  .lead {
+    position: absolute; left: 170px; top: 3260px; width: 2200px;
+    font-family: var(--serif); font-size: 68px; line-height: 1.56; color: var(--ink);
+  }
+  .lead em { font-style: normal; color: var(--cinnabar); }
+  .data { position: absolute; left: 170px; top: 2900px; width: 2300px; display: flex; }
+  .data .cell { padding-right: 34px; margin-right: 34px; border-right: 1px solid rgba(27,30,26,.2); }
+  .data .cell:last-child { border-right: 0; margin-right: 0; }
+  .data .num { font-family: var(--serif); font-weight: 600; font-size: 72px; line-height: 1; color: var(--ink); }
+  .data .num span { font-size: 30px; font-weight: 400; margin-left: 6px; color: var(--ink-2); }
+  .data .lab { font-family: var(--sans); font-size: 25px; font-weight: 300; letter-spacing: .1em; color: var(--ink-3); margin-top: 14px; }
+  .note { position: absolute; left: 170px; top: 3520px; width: 2300px; font-family: var(--sans); font-size: 29px; font-weight: 300; line-height: 1.7; color: var(--ink-3); }
+  .sealwrap { position: absolute; left: 3000px; top: 3960px; width: 200px; height: 240px; }
+  .seal { position: absolute; left: 0; top: 0; width: 186px; height: 226px; font-size: 78px; line-height: 1.08; padding-top: 22px; text-align: center; writing-mode: vertical-rl; letter-spacing: .06em; }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <div class="paper-grain"></div>
+
+  <div class="eyebrow" data-safe>2026 第二届 AI 工艺美术创意设计大赛　·　日用器物　·　西湖绸伞</div>
+
+  <div class="title" data-safe>雨骨</div>
+  <div class="sub" data-safe>一 把 记 着 二 十 五 天 雨 的 伞</div>
+
+  <svg width="3508" height="4961" id="disc" aria-label="伞面俯视：二十五圈雨带"></svg>
+
+  <div class="data" data-safe>
+    <div class="cell"><div class="num" data-k="days">25<span>天</span></div><div class="lab">梅　雨　期</div></div>
+    <div class="cell"><div class="num" data-k="total">422.8<span>毫米</span></div><div class="lab">合　计</div></div>
+    <div class="cell"><div class="num" data-k="drops">424<span>滴</span></div><div class="lab">墨　点</div></div>
+    <div class="cell"><div class="num" data-k="peak">82.6<span>毫米</span></div><div class="lab">最　大　的　一　天</div></div>
+  </div>
+
+  <div class="lead" data-safe data-fit>撑开是一把伞，也是那场雨；<br/><em>收起来，它还是一支竹。</em></div>
+
+  <div class="note" data-safe data-fit>
+    一天一圈，从伞心到伞边：外圈是 7 月 3 日，内圈是 6 月 9 日，每圈等面积。一滴墨记一毫米雨，那一圈墨的浓淡也由当天的雨量决定。数据：杭州 2024 年梅雨期，Open-Meteo 再分析日值。
+  </div>
+
+  <div class="sealwrap"><div class="seal">雨骨</div></div>
+</div>
+
+<script src="../data/rain-2024.js"></script>
+<script src="pattern.js"></script>
+<script>
+  (function () {
+    const daily = window.RAIN.daily;
+    const st = window.YUGU.stats(daily);
+    const set = (k, v) => { const el = document.querySelector(`[data-k="${k}"]`); if (el) el.firstChild.nodeValue = v; };
+    set("days", String(st.n)); set("total", st.total.toFixed(1)); set("drops", String(st.drops)); set("peak", st.max.toFixed(1));
+    window.YUGU.open(document.getElementById("disc"), { cx: 1500, cy: 1900, R: 760, daily, w: 3508, h: 4961 });
+    window.__YUGU_REPORT__ = { stats: st, rings: 25 };
+  })();
+</script>
+</body>
+</html>
